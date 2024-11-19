@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modelo 3D - Novo</title>
+  <title>Modelo 3D Interativo</title>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
   <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #222; /* Ajuste de fundo da página */
+      margin: 0;
+    }
     model-viewer {
-      width: 100%; /* Largura 100% da tela */
-      height: 80vh; /* 80% da altura visível */
-      margin: 0 auto;
-      display: block;
+      width: 100%;
+      height: 80vh;
     }
   </style>
 </head>
 <body>
-  <model-viewer src="3077-tcm 80x80.glb" alt="Novo Modelo 3D" camera-controls auto-rotate background-color="#FFFFFF"></model-viewer>
+  <h1 style="color: white;">Visualizador 3D</h1>
+  <model-viewer
+    src="3077-tcm 80x80.glb"
+    camera-controls
+    auto-rotate
+    environment-image="photo_studio_01_1k.hdr"  <!-- Arquivo HDR -->
+    exposure="2"  <!-- Ajuste de exposição -->
+    background-color="#000000"> <!-- Cor de fundo -->
+  </model-viewer>
 </body>
 </html>
